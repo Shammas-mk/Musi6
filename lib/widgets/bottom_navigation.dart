@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:musicapp/views/home_screen.dart';
 import 'package:musicapp/views/playlist_screen.dart';
 import 'package:musicapp/views/premium_screen.dart';
-import 'package:musicapp/views/profile_screen.dart';
+import 'package:musicapp/views/search_screen.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingNavBar(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       color: Colors.green,
       selectedIconColor: Colors.white,
       unselectedIconColor: Colors.white.withOpacity(0.6),
@@ -22,6 +22,10 @@ class BottomNavBar extends StatelessWidget {
             page: const HomeScreen(),
             title: 'Home'),
         FloatingNavBarItem(
+            iconData: Icons.search,
+            page: const SearchScreen(),
+            title: 'Search'),
+        FloatingNavBarItem(
             iconData: Icons.music_note_outlined,
             page: const PlaylistScreen(),
             title: 'For You'),
@@ -29,10 +33,6 @@ class BottomNavBar extends StatelessWidget {
             iconData: Icons.workspace_premium_outlined,
             page: const PremiumScreen(),
             title: 'Premium'),
-        FloatingNavBarItem(
-            iconData: Icons.person_outline,
-            page: const ProfileScreen(),
-            title: 'Profile'),
       ],
       horizontalPadding: 10.0,
       hapticFeedback: true,

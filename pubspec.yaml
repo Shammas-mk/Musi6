@@ -38,7 +38,7 @@ dependencies:
   get: ^4.6.5
   google_sign_in: ^5.4.1
   floating_navbar: ^2.0.2
-  glassmorphism_ui: ^0.3.0
+  fluttertoast: ^8.0.9
 
 dev_dependencies:
   flutter_test:
