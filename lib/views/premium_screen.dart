@@ -10,13 +10,14 @@ class PremiumScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          ConstrainedBox(
-            constraints: const BoxConstraints.expand(),
-            child: Image.asset(
-              "assets/images/background.jpg",
-              height: MediaQuery.of(context).size.height,
+          Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/images/background.jpg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
-          ),
           Center(
             child: ClipRect(
               child: BackdropFilter(
